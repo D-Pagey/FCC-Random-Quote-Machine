@@ -24,6 +24,6 @@ $(document).ready(function() {
 
   });
 
-
-
 });
+
+// I';m going to redo this so it works 1) locally and 2) without JQuery
