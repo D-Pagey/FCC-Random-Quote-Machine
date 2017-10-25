@@ -1,29 +1,30 @@
-$(document).ready(function() {
+const quoteEl = document.getElementById("quote");
+const artistEl = document.getElementById("artist");
 
-  $.ajaxSetup ({cache:false});
+url = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
 
-  $("#getQuote").on("click", function() {
+fetch(url)
+  .then((resp) => resp.json())
+  .then(function(data) {
+    console.log(data);
 
-    $.getJSON("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&callback=", function(data) {
+  function newQuote() {
+      quoteEl.innerHTML = data[0].content;
+      artistEl.innerHTML = data[0].title;
+    }
 
-      $("#quote").html(data[0].content + " - " + data[0].title)
+newQuote();
 
-    });
+    document.getElementById("button").addEventListener("click", newQuote);
 
-  });
+})
 
-  $("#tweeter").on("click", function() {
+  .catch(function(error) {
+    console.log("Something went wrong");
+})
 
-// this is horrible code but I couldn't work out why my tweets were including the <p> tags.
+/*
+User Story: I can click a button to show me a new random quote.
 
-    var tweet1 = $("#quote").html();
-    var tweet2 = tweet1.replace("<p>", "");
-    var tweet3 = tweet2.replace("</p>", "");
-
-    window.open("https://twitter.com/intent/tweet?text=" + tweet3);
-
-  });
-
-});
-
-// I';m going to redo this so it works 1) locally and 2) without JQuery
+User Story: I can press a button to tweet out a quote.
+*/
