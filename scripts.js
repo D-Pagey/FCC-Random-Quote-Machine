@@ -1,15 +1,15 @@
 const quoteEl = document.getElementById("quote");
 const artistEl = document.getElementById("artist");
 
-url = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
+const url = "https://talaikis.com/api/quotes/random/";
 
 function quoter() {
 fetch(url)
   .then((resp) => resp.json())
   .then(function(data) {
     console.log(data);
-    quoteEl.innerHTML = data[0].content;
-    artistEl.innerHTML = data[0].title;
+    quoteEl.innerHTML = data.quote;
+    artistEl.innerHTML = "<br> - " + data.author;
 })
 
   .catch(function(error) {
@@ -19,3 +19,9 @@ fetch(url)
 }
 
 document.getElementById("button").addEventListener("click", quoter);
+
+/*
+  - Open window on clicking twitter button
+  - Use the twitter share url
+  - concat onto it contents of api call
+*/
