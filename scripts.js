@@ -3,6 +3,7 @@ const artistEl = document.getElementById("artist");
 const url = "https://talaikis.com/api/quotes/random/";
 
 let responseData;
+console.log(responseData);
 
 function quoter() {
 fetch(url)
@@ -20,14 +21,18 @@ fetch(url)
 
 document.getElementById("button").addEventListener("click", quoter);
 
-function tweeter() {
-  let twitterUrl = "https://twitter.com/intent/tweet?text=";
+const twitterUrl = "https://twitter.com/intent/tweet?text=";
 
-  if (responseData !== undefined) {
-     window.open(twitterUrl += responseData.quote);
-  } else {
-     window.open(twitterUrl += "Press the Random Quote button to have something to tweet about.");
-  }
+function withData() {
+  window.open(twitterUrl + responseData.quote);
+}
+
+function noData() {
+   window.open(twitterUrl + "Press the Random Quote button to have something to tweet about.");
+}
+
+function tweeter() {
+  return (responseData ? withData() : noData());
 }
 
 document.getElementById("tweeter").addEventListener("click", tweeter);
