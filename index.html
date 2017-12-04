@@ -8,61 +8,30 @@
     <title>Random Quote Machine</title>
 
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   </head>
   <body>
 
-<div class="container-fluid">
+    <!-- Heading -->
+    <h1 class="title" id="title">Quote Generator</h1>
 
-<!-- Heading -->
-  <div class="row">
-    <div class="col">
-      <h4 class="display-4" id="title">Quote Generator</h4>
-    </div>
-  </div>
+    <!-- Quote Text -->
+    <span class="quote" id="quote">Clicking this button should bring up a random quote in this place.</span>
+    <span class="artist" id="artist"></span>
 
-  <br>
-
-<!-- Quote Text -->
-  <div class="row">
-    <div class="col">
-      <p class="text-center font-italic"><span id="quote">Clicking this button should bring up a random quote in this place.</span><span id="artist"></span></p>
-    </div>
-  </div>
-
-<!-- Quote Button -->
-  <div class="row">
-    <div class="col text-center">
-      <button id="button" class="btn btn-primary btn-lg">Random Quote</button>
-    </div>
-  </div>
-
-  <br>
-
-<!-- Twitter Button -->
-<div class="row">
-  <div class="col text-center">
+    <!-- Buttons -->
+    <button class="quote-button" id="button">Random Quote</button>
     <a href="#" id="tweeter"><i class="fa fa-twitter-square fa-3x social"></i></a>
-  </div>
-</div>
 
-<!-- Footer -->
-<div class="row">
-  <div class="col">
-    <div class="footer">
-    <p>Written and coded by <a href="https://www.freecodecamp.org/d-pagey" target="_blank">Pagey</a></p>
-    </div>
-  </div>
-  </div>
-</div>
+    <!-- Footer -->
+    <p class="footer">Written and coded by <a href="https://www.freecodecamp.org/d-pagey" target="_blank" class="footer-link">Pagey</a></p>
 
-
-<!--
-User Story: DONE - I can click a button to show me a new random quote.
-User Story: DONE - I can press a button to tweet out a quote.
--->
+    <!--
+    User Story: DONE - I can click a button to show me a new random quote.
+    User Story: DONE - I can press a button to tweet out a quote.
+    -->
 
     <script type="text/javascript" src="scripts.js"></script>
   </body>

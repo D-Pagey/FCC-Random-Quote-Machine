@@ -11,7 +11,7 @@ fetch(url)
   .then(function(data) {
     responseData = data;
     quoteEl.innerHTML = data.quote;
-    artistEl.innerHTML = "<br> - " + data.author;
+    artistEl.innerHTML = data.author;
 })
 
   .catch(function(error) {
