@@ -3,31 +3,26 @@ const artistEl = document.getElementById("artist");
 const buttonEl = document.getElementById("button");
 const url = "https://talaikis.com/api/quotes/random/";
 
-function btnState() {
+function disableBtn() {
   buttonEl.setAttribute("disabled", true);
+}
+
+function activateBtn() {
   buttonEl.removeAttribute("disabled");
 }
-
-btnState();
-
-function changeBtnState() {
-
-}
-
-// need to disable button until receive response 
 
 let responseData;
 console.log(responseData);
 
 function quoter() {
-
+disableBtn();
 fetch(url)
   .then((resp) => resp.json())
   .then(function(data) {
     responseData = data;
     quoteEl.innerHTML = data.quote;
     artistEl.innerHTML = data.author;
-
+    activateBtn();
 })
 
   .catch(function(error) {
