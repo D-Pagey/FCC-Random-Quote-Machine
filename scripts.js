@@ -7,7 +7,7 @@ function disableBtn() {
   buttonEl.setAttribute("disabled", true);
 }
 
-function activateBtn() {
+function enableBtn() {
   buttonEl.removeAttribute("disabled");
 }
 
@@ -22,7 +22,7 @@ fetch(url)
     responseData = data;
     quoteEl.innerHTML = data.quote;
     artistEl.innerHTML = data.author;
-    activateBtn();
+    enableBtn();
 })
 
   .catch(function(error) {
