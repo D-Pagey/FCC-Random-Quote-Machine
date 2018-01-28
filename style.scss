@@ -23,12 +23,6 @@ body {
   display: flex;
   flex-direction: column;
   margin: 10px auto;
-  // @include mediaQueries($medium) {
-  //   width: 80%;
-  // }
-  // @include mediaQueries($large) {
-  //   width: 75%;
-  // }
 }
 
 /* Modal */
@@ -65,7 +59,7 @@ body {
 }
 
 .material-icons.sm-12 {
-  font-size: 12px;
+  font-size: 20px;
 }
 
 .modal-title {
@@ -73,7 +67,6 @@ body {
   font-size: 1.1em;
   padding: .5em;
   text-decoration: underline;
-  width: 7em;
 }
 
 .user-stories {
@@ -91,6 +84,7 @@ body {
 
 .link {
   color: royalblue;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -110,13 +104,7 @@ body {
   display: inline-block;
   font-style: italic;
   margin-bottom: 1em;
-  max-width: 70%;
-  // @include mediaQueries($small) {
-  //   max-width: 100%;
-  // }
-  // @include mediaQueries($medium) {
-  //   max-width: 100%;
-  // }
+  width: 87.5%;
 }
 
 .artist {

@@ -42,14 +42,13 @@ body {
   float: right; }
 
 .material-icons.sm-12 {
-  font-size: 12px; }
+  font-size: 20px; }
 
 .modal-title {
   color: royalblue;
   font-size: 1.1em;
   padding: .5em;
-  text-decoration: underline;
-  width: 7em; }
+  text-decoration: underline; }
 
 .user-stories {
   font-style: italic;
@@ -63,6 +62,7 @@ body {
 
 .link {
   color: royalblue;
+  font-weight: 600;
   text-decoration: none; }
 
 .modal-about::backdrop {
@@ -79,7 +79,7 @@ body {
   display: inline-block;
   font-style: italic;
   margin-bottom: 1em;
-  max-width: 70%; }
+  width: 87.5%; }
 
 .artist {
   font-weight: 600;
