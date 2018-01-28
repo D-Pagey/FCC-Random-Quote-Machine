@@ -33,8 +33,9 @@ body {
   border-radius: 5px;
   margin: 0 auto;
   padding: .5em;
-  top: 15%;
-  width: 80%; }
+  top: 100px;
+  width: 80%;
+  max-width: 400px; }
 
 .modal-cancel {
   background-color: transparent;
@@ -79,7 +80,11 @@ body {
   display: inline-block;
   font-style: italic;
   margin-bottom: 1em;
-  width: 87.5%; }
+  width: 87.5%;
+  max-width: 400px; }
+  @media screen and (min-width: 420px) {
+    .quote {
+      width: 82.5%; } }
 
 .artist {
   font-weight: 600;

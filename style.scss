@@ -1,7 +1,5 @@
 /* Variables */
-$small: "(max-width: 416px)";
-$medium: "(min-width: 417px)";
-$large: "(min-width: 800px)";
+$mobile-lg: "(min-width: 420px)";
 
 /* Mixins */
 @mixin mediaQueries($arg) {
@@ -48,8 +46,9 @@ body {
   border-radius: 5px;
   margin: 0 auto;
   padding: .5em;
-  top: 15%;
+  top: 100px;
   width: 80%;
+  max-width: 400px;
 }
 
 .modal-cancel {
@@ -105,6 +104,10 @@ body {
   font-style: italic;
   margin-bottom: 1em;
   width: 87.5%;
+  max-width: 400px;
+  @include mediaQueries($mobile-lg) {
+    width: 82.5%;
+  }
 }
 
 .artist {
