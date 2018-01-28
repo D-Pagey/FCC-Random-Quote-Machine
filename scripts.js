@@ -12,8 +12,8 @@ function enableBtn() {
 }
 
 let responseData;
-console.log(responseData);
 
+// Quote functionality
 function quoter() {
 disableBtn();
 fetch(url)
@@ -32,6 +32,7 @@ fetch(url)
 
 buttonEl.addEventListener("click", quoter);
 
+// Tweet functionality
 const twitterUrl = "https://twitter.com/intent/tweet?text=";
 
 function withData() {
@@ -47,3 +48,16 @@ function tweeter() {
 }
 
 document.getElementById("tweeter").addEventListener("click", tweeter);
+
+// Modal functionality
+const modalBtn = document.getElementsByClassName('modal-btn');
+const modal = document.getElementsByClassName('modal-about');
+const button = document.getElementsByClassName('modal-cancel');
+
+modalBtn[0].addEventListener('click', function() {
+  modal[0].showModal();
+});
+
+button[0].addEventListener('click', function() {
+  modal[0].close();
+})
