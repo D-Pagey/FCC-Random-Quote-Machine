@@ -4,8 +4,14 @@
 - [x] I can click a button to show me a new random quote.
 - [x] I can press a button to tweet out a quote.
 
-I first completed this task using JQuery, Ajax and it worked functionally but I didn't understand the code at all. After relooking at the code I decided to redo it all using native JavaScript and the Fetch API. I'm glad I went to the effort of recoding this project since I learnt a lot and reinforced my comprehension of things I thought I understood.
+This is my 3rd project for the FreeCodeCamp curriculum. The most recent version of this project was written in React using Create-React-App. In the past, I have made versions of this project in Bootstrap and then pure HTML and CSS, using Flexbox.
 
-I have refactored the Bootstrap code I was using and replaced it with SCSS and Flexbox. I've also restyled mobile-first and added a Modal to explain the project.
+**Improvements:**
+- Fix the ::backdrop CSS element on the Dialog element. It works in the vanilla JS version but not in the React version.
+
+**Getting Started:**
+ 1. Run: `npm install`
+ 2. Run: `npm start` _(in a new terminal)_
+ 3. Go to: `http://localhost:3000/`
 
 You can see this [Random Quote Machine](https://codepen.io/Pagey/pen/eEXRZy) project on CodePen.
