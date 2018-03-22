@@ -5,9 +5,9 @@ import './Buttons.css';
 class Buttons extends Component {
   render() {
     return (
-      <div>
-        <button className="quote-button" id="button">Random Quote</button>
-        <a href="#" id="tweeter"><i className="fa fa-twitter-square fa-3x social"></i></a>
+      <div className="buttons">
+        <button className="quote-button">Random Quote</button>
+        <a href="#"><i className="fa fa-twitter-square fa-3x social"></i></a>
       </div>
     )
   }
