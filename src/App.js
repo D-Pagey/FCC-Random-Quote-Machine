@@ -37,8 +37,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Quote quote={this.state.quote} author={this.state.author}/>
-        <Buttons fetchData={this.fetchData} />
+        <Quote quote={this.state.quote} author={this.state.author} />
+        <Buttons fetchData={this.fetchData} quote={this.state.quote} />
         <Footer />
       </div>
     );
@@ -46,3 +46,11 @@ class App extends Component {
 }
 
 export default App;
+
+/* To Do:
+- add catch for fetch method
+- add disable/enable state
+- add isLoading?
+- add Modal
+- responsive design
+*/
