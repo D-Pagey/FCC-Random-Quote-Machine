@@ -16,9 +16,15 @@ class App extends Component {
       quote: '',
       author: '',
     }
+
+    this.fetchData = this.fetchData.bind(this);
   }
 
   componentDidMount() {
+    this.fetchData();
+  }
+
+  fetchData() {
     fetch(url)
       .then(response => response.json())
       .then(data => this.setState({
@@ -32,7 +38,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Quote quote={this.state.quote} author={this.state.author}/>
-        <Buttons />
+        <Buttons fetchData={this.fetchData} />
         <Footer />
       </div>
     );
