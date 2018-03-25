@@ -16,12 +16,14 @@ class App extends Component {
     this.state = {
       quote: '',
       author: '',
+      isLoading: false
     }
 
     this.fetchData = this.fetchData.bind(this);
   }
 
   componentDidMount() {
+    this.setState({ isLoading: true })
     this.fetchData();
   }
 
@@ -30,8 +32,13 @@ class App extends Component {
       .then(response => response.json())
       .then(data => this.setState({
         quote: data.quote,
-        author: data.author
+        author: data.author,
+        isLoading: false
       }))
+
+      .catch(function(error) {
+        console.log("Something went wrong");
+      })
   }
 
   render() {
@@ -39,7 +46,8 @@ class App extends Component {
       <div className="App">
         <Modal />
         <Header />
-        <Quote quote={this.state.quote} author={this.state.author} />
+        <Quote quote={this.state.quote} author={this.state.author}
+          isLoading={this.state.isLoading} />
         <Buttons fetchData={this.fetchData} quote={this.state.quote} />
         <Footer />
       </div>
@@ -50,9 +58,5 @@ class App extends Component {
 export default App;
 
 /* To Do:
-- add catch for fetch method
-- add disable/enable state
-- add isLoading?
-- add Modal
 - responsive design
 */
