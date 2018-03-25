@@ -1,12 +1,14 @@
 .footer {
-  bottom: 0px;
+  bottom: 0;
   height: 30px;
-  left: 0px;
+  left: 0;
   margin-bottom: 10px;
   position: fixed;
   text-align: center;
-  width: 100%; }
+  width: 100%;
+}
 
 .footer-link {
   color: #007bff;
-  text-decoration: none; }
+  text-decoration: none;
+}

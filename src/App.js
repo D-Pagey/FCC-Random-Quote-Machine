@@ -56,7 +56,3 @@ class App extends Component {
 }
 
 export default App;
-
-/* To Do:
-- responsive design
-*/

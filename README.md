@@ -14,4 +14,4 @@ This is my 3rd project for the FreeCodeCamp curriculum. The most recent version 
  2. Run: `npm start` _(in a new terminal)_
  3. Go to: `http://localhost:3000/`
 
-You can see this [Random Quote Machine](https://codepen.io/Pagey/pen/eEXRZy) project on CodePen.
+You can see a Vanilla JS demo of this [Random Quote Machine](https://codepen.io/Pagey/pen/eEXRZy) project on CodePen.
