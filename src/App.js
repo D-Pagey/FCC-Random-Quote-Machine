@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './App.css';
+import Modal from './components/Modal';
 import Header from './components/Header';
 import Quote from './components/Quote';
 import Buttons from './components/Buttons';
@@ -36,6 +37,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Modal />
         <Header />
         <Quote quote={this.state.quote} author={this.state.author} />
         <Buttons fetchData={this.fetchData} quote={this.state.quote} />
