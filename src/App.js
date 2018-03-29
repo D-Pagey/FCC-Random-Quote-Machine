@@ -8,6 +8,7 @@ import Buttons from './components/Buttons';
 import Footer from './components/Footer';
 
 const url = "https://talaikis.com/api/quotes/random/";
+const twitterUrl = "https://twitter.com/intent/tweet?text=";
 
 class App extends Component {
   constructor(props) {
@@ -48,7 +49,7 @@ class App extends Component {
         <Header />
         <Quote quote={this.state.quote} author={this.state.author}
           isLoading={this.state.isLoading} />
-        <Buttons fetchData={this.fetchData} quote={this.state.quote} />
+        <Buttons fetchData={this.fetchData} quote={twitterUrl + this.state.quote} />
         <Footer />
       </div>
     );

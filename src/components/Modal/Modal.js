@@ -14,15 +14,11 @@ class Modal extends Component {
   }
 
   handleClick() {
-    if (this.state.modal === false) {
-      this.setState({
-        modal: true
-      })
-    } else {
-      this.setState({
-        modal: false
-      })
-    }
+    this.setState(prevState => {
+      return {
+        modal: !prevState.modal
+      };
+    });
   }
 
   render() {
