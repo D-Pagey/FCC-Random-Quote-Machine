@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './Quote.css';
 
-function Quote(props) {  
-  if (props.isLoading) {
+function Quote({quote, author, isLoading}) {  
+  if (isLoading) {
     return <p>Loading...</p>
   } else {
     return (
       <div className="quote-container">
-        <span className="quote">{props.quote}</span> -
-          <span className="artist"> {props.author}</span>
+        <span className="quote">{quote}</span> -
+          <span className="artist"> {author}</span>
         </div>
     )
   }

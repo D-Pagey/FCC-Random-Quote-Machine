@@ -1,8 +1,7 @@
 .quote-container {
-  margin: 0 auto;
-  width: 87.5%;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem;
   max-width: 400px;
+  width: 87.5%;
 }
 
 .quote {
